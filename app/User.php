@@ -52,20 +52,4 @@ class User extends Authenticatable
     {
         $this->loadCount('microposts');
     }
-    
-    /**
-     * このユーザが所有する投稿。（ Micropostモデルとの関係を定義）
-     */
-    public function microposts()
-    {
-        return $this->hasMany(Micropost::class);
-    }
-    
-    /**
-     * このユーザに関係するモデルの件数をロードする。
-     */
-    public function loadRelationshipCounts()
-    {
-        $this->loadCount('microposts');
-    }
 }

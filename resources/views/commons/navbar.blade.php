@@ -8,7 +8,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="nav-bar">
-            <ul class="navbar-nav mr-auto"></ul>s
+            <ul class="navbar-nav mr-auto"></ul>
             <ul class="nav navbar-nav navbar-right">
                  @if (Auth::check())
                     {{-- ユーザ一覧ページへのリンク --}}
@@ -27,9 +27,9 @@
                     {{-- ユーザ登録ページへのリンク --}}
                     <li>{!! link_to_route('signup.get', 'Signup', [], ['class' => 'nav-link']) !!}</li>
                     {{-- ログインページへのリンク --}}
-                    <li><a href="#">Login</a></li>
-                </ul>
-             @endif
+                    <li class="nav-item">{!! link_to_route('login', 'Login', [], ['class' => 'nav-link']) !!}</li>
+                @endif
+            </ul> 
         </div>
     </nav>
 </header>
